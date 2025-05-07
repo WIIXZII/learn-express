@@ -2,7 +2,7 @@ import express from "express";
 import db from "./database.js";
 
 const app = express(); // is the express module written express team
-const port = 3000; // port number
+const port = 3000;
 
 app.use(express.json());
 
