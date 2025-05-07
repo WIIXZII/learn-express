@@ -20,17 +20,19 @@ class Database {
   }
 
   // Get all records from a collection // db.getAll("users")
-  getAll(collection) { 
+  getAll(collection) {
     return this.db.data[collection] || [];
   }
 
   // Get a single record by ID
-  getById(collection, id) {  // db.getById("users", "123435")
+  getById(collection, id) {
+    // db.getById("users", "123435")
     return this.db.data[collection]?.find((item) => item.id === id);
   }
 
   // Find records matching criteria (object-based search)
-  find(collection, criteria) { // {category: "permium"} // db.find("users", {category: "premium"})
+  find(collection, criteria) {
+    // {category: "permium"} // db.find("users", {category: "premium"})
     const records = this.db.data[collection];
     if (!records) return [];
 

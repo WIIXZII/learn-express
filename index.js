@@ -2,7 +2,7 @@ import express from "express";
 import db from "./database.js";
 
 const app = express(); // is the express module written express team
-const port = 3000;
+const port = "https://render.com/docs/web-services#port-binding" || 3000; // port number
 
 app.use(express.json());
 
